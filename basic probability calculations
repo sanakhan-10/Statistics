@@ -1,0 +1,23 @@
+import numpy as np
+
+outcomes = np.rray([1,2,3,4,5,6])
+
+even_outcomes = outcomes[outcomes % 2==0]
+prob_even = len(even_outcomes) / len(outcomes)
+
+greater_than_four = outcomes[outcomes > 4]
+prob_greater_four = len(greater_than_four) / len(outcomes)
+
+print("Theoretical Probability:") 
+print("P(Even number) =", prob_even) 
+print("P(Number > 4) =", prob_greater_four)
+
+np.random.seed(42)
+rolls = np.random.randint(1, 7, 10000)
+
+experimental_even = np.sum(rolls % 2 == 0) / len(rolls) 
+experimental_greater_four = np.sum(rolls > 4) / len(rolls)
+
+print("\nExperimental Probability:") 
+print("P(Even number) =", experimental_even) 
+print("P(Number > 4) =", experimental_greater_four)
