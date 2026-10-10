@@ -1,0 +1,21 @@
+import numpy as np
+from statistics import mode
+
+marks = [78,90,56,72,56,74]
+
+print("Our dataset :",marks)
+
+mean = np.mean(marks)
+print("\nMean :",mean)
+
+median = np.median(marks)
+print("\nMedian :",median)
+
+mode_values = mode(marks)
+print("\nMode :",mode_values)
+
+data_range = np.max(marks) - np.min(marks)
+print("\nRange :",data_range)
+
+sd = np.std(marks)
+print("\nStandard Deviation :",sd)
