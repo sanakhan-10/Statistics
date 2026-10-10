@@ -1,0 +1,27 @@
+import matplotlib.pyplot as plt
+
+student = ["A","B","C","D","E","F","G","H"]
+marks = [43,56,78,90,22,34,98,67]
+
+#Histogram
+plt.figure()
+plt.hist(marks,bins=5,edgecolor="black")
+plt.xlabel("Marks")
+plt.ylabel("Frequency")
+plt.title("Histogram of marks")
+plt.show()
+
+#Boxplot
+plt.figure()
+plt.boxplot(marks)
+plt.ylabel("Marks")
+plt.title("Boxplot of marks")
+plt.show()
+
+#Bar chart
+plt.figure()
+plt.bar(student,marks)
+plt.xlabel("Students")
+plt.ylabel("Marks")
+plt.title("Student marks")
+plt.show()
