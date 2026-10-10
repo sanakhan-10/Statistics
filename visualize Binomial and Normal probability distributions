@@ -1,0 +1,30 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+np.random.seed(42)
+
+binomial = np.random.binomial(
+    n=10,
+    p=0.5,
+    size=1000
+)
+
+plt.figure()
+plt.hist(binomial,bins=11,edgecolor="black")
+plt.xlabel("Number of successes")
+plt.ylabel("Frequency")
+plt.title("Binomial distributions")
+plt.show()
+
+normal_distribution = np.random.normal(
+    loc=50,    
+    scale=10,
+    size=1000
+)
+
+plt.figure()
+plt.hist(normal_distribution,bins=30,edgecolor="black")
+plt.xlabel("Value")
+plt.ylabel("Frequency")
+plt.title("Normal distribution")
+plt.show()
